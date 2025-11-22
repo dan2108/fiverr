@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Project {
+  id                String   @id @default(uuid())
+  type              String   // "SOCIAL_CONTENT" | "TIKTOK_SCRIPTS" | "BRANDING_KIT"
+  clientName        String
+  clientBusinessName String?
+  niche             String
+  platform          String?
+  toneOfVoice       String?
+  language          String   @default("en")
+  brief             String
+  inputsJson        String
+  outputJson        String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([type])
+  @@index([clientName])
+  @@index([createdAt])
+}
