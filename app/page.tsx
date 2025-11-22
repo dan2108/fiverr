@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { FileText, Video, Palette, FolderOpen } from 'lucide-react'
+import { FileText, Video, Palette, FolderOpen, Briefcase } from 'lucide-react'
 import { getProjectStats, getRecentProjects } from '@/app/actions/projects'
 import { Badge } from '@/components/ui/badge'
 
@@ -81,6 +81,24 @@ export default async function Dashboard() {
           </CardContent>
         </Card>
       </div>
+
+      {/* Portfolio CTA */}
+      <Card className="mb-8 bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
+        <CardContent className="p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-xl font-bold mb-1">Showcase Your Work</h2>
+              <p className="text-muted-foreground">View your portfolio of generated content and projects</p>
+            </div>
+            <Link href="/portfolio">
+              <Button size="lg">
+                <Briefcase className="mr-2 h-4 w-4" />
+                View Portfolio
+              </Button>
+            </Link>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Quick Actions */}
       <div className="grid gap-4 md:grid-cols-3 mb-8">

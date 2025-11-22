@@ -3,12 +3,13 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, FileText, Video, Palette, Settings, FolderOpen, Menu, X } from 'lucide-react'
+import { LayoutDashboard, FileText, Video, Palette, Settings, FolderOpen, Menu, X, Briefcase } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
+  { name: 'Portfolio', href: '/portfolio', icon: Briefcase },
   { name: 'Social Content', href: '/social', icon: FileText },
   { name: 'TikTok Scripts', href: '/scripts', icon: Video },
   { name: 'Branding Kits', href: '/branding', icon: Palette },

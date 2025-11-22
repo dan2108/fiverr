@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, FileText, Video, Palette, Settings, FolderOpen } from 'lucide-react'
+import { LayoutDashboard, FileText, Video, Palette, Settings, FolderOpen, Briefcase } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
+  { name: 'Portfolio', href: '/portfolio', icon: Briefcase },
   { name: 'Social Content', href: '/social', icon: FileText },
   { name: 'TikTok Scripts', href: '/scripts', icon: Video },
   { name: 'Branding Kits', href: '/branding', icon: Palette },
