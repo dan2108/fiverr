@@ -141,7 +141,7 @@ export default async function Dashboard() {
             </p>
           ) : (
             <div className="space-y-4">
-              {recentProjects.map((project) => (
+              {recentProjects.map((project: any) => (
                 <Link
                   key={project.id}
                   href={`/projects/${project.id}`}
