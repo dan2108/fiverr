@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Fiverr Studio",
-  description: "Generate AI-powered Fiverr service deliverables fast",
+  title: "AI Fiverr Studio - Generate Social Content, Scripts & Branding Kits",
+  description: "Professional AI-powered content generation for Fiverr services. Create social media posts, TikTok scripts, and branding kits in minutes.",
 };
 
 export default function RootLayout({
